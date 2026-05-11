@@ -7,8 +7,8 @@
 On session start: read this file, state last action, state next step, ask for confirmation.
 
 ## You Are Here
-**Status:** Build complete — awaiting user assets, GitHub setup, and cPanel deployment
-**Mode:** Handoff / Asset swap / Deployment
+**Status:** LIVE at https://waysen.co.uk
+**Mode:** Post-launch — asset swap and QA remaining
 
 ## Master Roadmap
 | Phase | Status | Description |
@@ -20,9 +20,10 @@ On session start: read this file, state last action, state next step, ask for co
 | 5 — Contact Form PHP | ✅ DONE | PHP mail handler with rate limiting and auto-reply |
 | 6 — Supporting Files | ✅ DONE | .htaccess, sitemap.xml, robots.txt, 404.html |
 | 7 — GitHub + cPanel Docs | ✅ DONE | Full step-by-step in README.md |
-| 8 — Asset Swap | ⏳ WAITING ON USER | User to provide images/logos for site/assets/ |
-| 9 — GitHub Push | ⏳ WAITING ON USER | Create repo and push (commands in README.md) |
-| 10 — cPanel Deployment | ⏳ WAITING ON USER | Connect cPanel Git Version Control to repo |
+| 8 — Favicon | ✅ DONE | Green W favicon (ICO + SVG) generated and wired up |
+| 9 — GitHub Push | ✅ DONE | Pushed to github.com/richardgleeson83/waysen (main) |
+| 10 — Asset Swap | ⏳ WAITING ON USER | User to provide images/logos for site/assets/ |
+| 11 — cPanel Deployment | ✅ DONE | Deployed via cPanel Fileman API — LIVE at waysen.co.uk |
 | 11 — Quality Audit | ⏳ PENDING | Test contact form live, mobile check, submit sitemap to Google |
 
 ## Component / Feature Registry
@@ -58,41 +59,22 @@ On session start: read this file, state last action, state next step, ask for co
 | 2026-05-11 | Project initialized, brand research completed |
 | 2026-05-11 | Build brief created and approved |
 | 2026-05-11 | All project files created (homepage, blog, PHP, README) |
+| 2026-05-11 | Favicon created (green W, ICO + SVG), wired up in all HTML pages |
+| 2026-05-11 | Pushed to GitHub: github.com/richardgleeson83/waysen (main) |
+| 2026-05-11 | Deployed to cPanel via Fileman API + PHP extractor — LIVE at waysen.co.uk |
 
 ## Next Immediate Steps (do these in order)
 
 ### STEP 1 — Provide images & logos (USER ACTION)
-Drop your image files into `site/assets/`. Key files needed:
-- `waysen-logo.png` — main logo (used in nav + footer on every page)
-- `vancat.png` — VanCat brand logo (portfolio section)
-- `rocat.png` — RoCat brand logo (portfolio section)
-- `ponza.png` — Pomza Export logo (portfolio section)
-- A photo for the About section (replaces the placeholder lifestyle image)
-- Optional: hero background image if you want one
-- Optional: `favicon.png` — browser tab icon
+Drop files into `site/assets/` when ready:
+- `waysen-logo.png`, `vancat.png`, `rocat.png`, `ponza.png`
+- About section photo
+Claude will swap CDN references to local paths, push a new commit, and redeploy.
 
-Once images are in `site/assets/`, Claude will swap all CDN references (`waysen.co.uk/wp-content/...`) to local paths (`/assets/filename`).
-
-### STEP 2 — Push to GitHub (USER ACTION)
-Run these commands in terminal from `/Users/richardgleeson/Projects/waysen`:
-```
-git init  (already done)
-git add .
-git commit -m "Initial Waysen website"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/waysen-website.git
-git push -u origin main
-```
-Full instructions in `README.md`.
-
-### STEP 3 — Connect cPanel Git Version Control (USER ACTION)
-1. Log in to cPanel
-2. Find "Git Version Control" under Files
-3. Create → paste your GitHub repo URL
-4. Set path to `public_html`
-5. Optional: add GitHub webhook for auto-deploy on push
-
-Full step-by-step in `README.md`.
+### STEP 2 — Quality Audit
+- Test live contact form (send a real email)
+- Mobile check on phone
+- Submit sitemap.xml to Google Search Console at https://waysen.co.uk/sitemap.xml
 
 ---
 After Steps 1–3 are complete, next work will be:
