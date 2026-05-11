@@ -594,6 +594,8 @@ p:last-child { margin-bottom: 0; }
   display: flex;
   flex-direction: column;
   transition: transform var(--transition), box-shadow var(--transition);
+  position: relative;
+  cursor: pointer;
 }
 
 .blog-card:hover {
@@ -676,7 +678,12 @@ p:last-child { margin-bottom: 0; }
   color: var(--green);
   transition: gap var(--transition);
 }
-.blog-card__read:hover { gap: 0.7rem; }
+.blog-card__read::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+.blog-card:hover .blog-card__read { gap: 0.7rem; }
 .blog-card__read svg {
   width: 14px;
   height: 14px;
