@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://waysen.co.uk/</loc>
+    <lastmod>2024-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://waysen.co.uk/blog/</loc>
+    <lastmod>2024-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://waysen.co.uk/blog/local-football-team-sponsorship.html</loc>
+    <lastmod>2024-03-13</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://waysen.co.uk/blog/smaralfalfa-progreso.html</loc>
+    <lastmod>2024-03-13</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://waysen.co.uk/blog/recyclable-packaging.html</loc>
+    <lastmod>2024-03-11</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>
