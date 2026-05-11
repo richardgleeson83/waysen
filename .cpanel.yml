@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/waysenco/public_html/
+    - /bin/cp -af site/. $DEPLOYPATH
