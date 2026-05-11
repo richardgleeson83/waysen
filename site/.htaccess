@@ -40,11 +40,11 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
 
 # ----- Protect PHP contact handler (allow only POST) -----
-<Files "contact.php">
+<FilesMatch "^contact\.php$">
   <LimitExcept POST>
     Deny from all
   </LimitExcept>
-</Files>
+</FilesMatch>
 
 # ----- Deny access to sensitive files -----
 <FilesMatch "\.(env|log|sql|bak|sh)$">
