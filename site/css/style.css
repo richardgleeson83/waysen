@@ -510,12 +510,16 @@ p:last-child { margin-bottom: 0; }
 
 /* ---------- PORTFOLIO ---------- */
 .portfolio__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
 }
 
 .brand-card {
+  flex: 0 1 calc((100% - 3rem) / 3);
+  min-width: 260px;
+  max-width: 100%;
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -529,6 +533,13 @@ p:last-child { margin-bottom: 0; }
 .brand-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 600px) {
+  .brand-card {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
 }
 
 .brand-card__logo {
