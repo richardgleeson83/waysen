@@ -68,6 +68,7 @@ On session start: read this file, state last action, state next step, ask for co
 | 2026-05-11 | Smaralfalfa portfolio card fixed to use logo not field photo |
 | 2026-05-11 | Contact form fixed: moved to root, removed LiteSpeed-incompatible htaccess rule |
 | 2026-07-31 | Added Fred's Catnip Farm as 5th portfolio brand (card + footer link + logo asset); portfolio grid reformatted from 4-col auto-fit grid to centered flex (3 + 2 rows) |
+| 2026-07-31 | Pushed to GitHub (c42b706) — cPanel Git webhook auto-deployed to live site, verified live (~2 min lag). Auto-deploy on push to main CONFIRMED working; no manual cPanel pull needed |
 
 ## Next Immediate Steps
 
